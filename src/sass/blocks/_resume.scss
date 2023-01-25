@@ -9,7 +9,6 @@
             left: 50%;
             transform: translateX(-170%);
         }
-
     }
     &__subtitle {
         text-align: center;
@@ -43,10 +42,10 @@
                 &::after {
                     content: '';
                     width: 1px;
-                    height: calc(100% + 30px);
+                    height: calc(100% + 16px);
                     // height: 100%;
                     position: absolute;
-                    top: -30px;
+                    top: -16px;
                     left: 0;
                     background-color: #000;
                 }
