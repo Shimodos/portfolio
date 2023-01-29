@@ -38,7 +38,7 @@
         display: grid;
         grid-template: 45px 190px 45px / repeat(2, 280px);
         justify-content: space-between;
-        row-gap: 32px;
+        row-gap: 27px;
         label {
             display: block;
             position: absolute;
@@ -65,8 +65,7 @@
         align-items: center;
         input {
             margin-right: 10px;
-        }
-        
+        }  
     }
     &__input {
         position: relative;
@@ -91,10 +90,12 @@
         }
     }
     &__btn {
+        text-align: center;
         font-weight: 700;
         font-size: 14px;
         line-height: 21px;
-        display: inline-block;
+        // align-items: center;
+        // display: inline-block;
         
         cursor: pointer;
         transition: 0.5s all;
