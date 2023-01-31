@@ -209,9 +209,11 @@
     }
     .skills {
         &__items {
+            justify-content: center;
             grid-template-columns: 270px;
         }
         &__ratings {
+            justify-content: center;
             padding-left: 10px;
             grid-template-columns: 270px;
             row-gap: 55px;
