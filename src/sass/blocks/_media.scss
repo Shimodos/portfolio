@@ -32,7 +32,12 @@
     .skills {
         &__items {
             padding: 40px 10px 0 10px;
-            grid-template-columns: repeat(3,300px);
+            // grid-template-columns: repeat(3,270px);
+            // justify-content: center;
+            grid-template-columns: repeat(auto-fit, 280px);
+            grid-auto-rows: 280px;
+            justify-content: space-around;
+            row-gap: 40px;
         }
         &__item {
             padding: 30px;
@@ -54,15 +59,19 @@
             grid-auto-rows: 280px;
             justify-content: space-around;
             row-gap: 40px;
+            margin-top: 40px;
             .horisontal, .vertical{
                 grid-row: unset;
                 grid-column: unset;
             }     
         }
     }
-    .portfolio {
+    .contacts {
         &__wrapper {
-            margin-top: 40px;
+            grid-template-columns: 380px 455px;
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2,220px);
         }
     }
 }
@@ -100,10 +109,12 @@
     .skills {
         &__items {
             padding: 40px 10px 0 10px;
-            grid-template-columns: repeat(3,225px);
+            grid-template-columns: repeat(2,270px);
+            justify-content: space-around;
+            row-gap: 40px;
         }
         &__item {
-            padding: 20px;
+            // padding: 20px;
         }
         &__ratings {
             padding-left: 10px;
@@ -125,6 +136,42 @@
         &__wrapper {
             grid-template-columns: repeat(auto-fit, 350px);
             padding: 0;
+        }
+    }
+    .contacts {
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: 720px;
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2,350px);
+        }
+        &__photo {
+            display: none;
+        }
+        &__title {
+            position: relative;
+            text-align: center;
+                &:before {
+                top: -6px;
+                left: 49%;
+                transform: translateX(-107%);
+            }
+        }
+        &__subtitle {
+            text-align: center;
+        }
+        .divider {
+            margin: 25px auto 0 auto;
+        }
+        &__text {
+            text-align: center;
+        }
+        &__social {
+            text-align: center;
+        }
+        &__link {
+            margin : 0 10px 0 10px;
         }
     }
 }
@@ -170,10 +217,12 @@
     .skills {
         &__items {
             padding: 20px 10px 0 10px;
-            grid-template-columns: repeat(2,255px);
+            grid-template-columns: repeat(2,270px);
+            justify-content: space-around;
+            row-gap: 15px;
         }
         &__item {
-            padding: 20px;
+            // padding: 20px;
         }
         &__ratings {
             padding-left: 10px;
@@ -188,7 +237,10 @@
     }
     .portfolio {
         &__wrapper {
+            grid-template-columns: repeat(2,280px);
             margin-top: 20px;
+            justify-content: space-around;
+            gap: 20px;
         }
     }
     .price {
@@ -197,6 +249,19 @@
             margin-top: 20px;
             justify-content: center;
         }
+    }
+    .contacts {
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: repeat(auto-fit,540px);
+        }
+        &__form {
+            grid-template: 45px 190px 45px / repeat(2,250px);
+        }
+        &__link {
+            margin : 0 10px 0 10px;
+        }
+        
     }
 }
 
@@ -264,9 +329,52 @@
             }
         }
     }
+    .portfolio {
+        &__wrapper {
+            grid-template-columns:280px;
+            margin-top: 20px;
+            justify-content: space-around;
+            gap: 20px;
+        }
+    }
     .price {
         &__wrapper {
             grid-template-columns: repeat(auto-fit, 295px);
+        }
+    }
+    .contacts {
+        padding-bottom: 50px;
+        &__wrapper {
+            padding: 0;
+            grid-template-columns: repeat(auto-fit,320px);
+            justify-content: space-around;
+        }
+        &__form {
+            grid-template: 45px 45px 190px minmax(45px, auto) / 1fr;
+        }
+        &__textarea {
+            grid-column: unset;
+            width: 100%;
+        }
+        &__triggers {
+            grid-column: unset;
+            grid-template-columns: 1fr;
+            column-gap: unset;
+            row-gap: 20px;
+        }
+        &__btn {
+            order: 2;
+            max-width: 220px;
+            margin: 0 auto;
+        }
+        &__policy {
+            width: 280px;
+            justify-content: center;
+            margin: 0 auto;
+            line-height: 18px;
+        }
+        &__link {
+            margin : 0 10px 0 10px;
         }
     }
 }
